@@ -12,8 +12,7 @@ jobs:
          node-version: '18.x'
      - name: Install dependencies
        run: npm install
-       
-     - name: Build project with permession
-       run: chmod +X ./node_modules/.bin/jest
-     - name: Eseguui i test
+     - name: Set execution permissions for Jest
+       run: chmod +x ./node_modules/.bin/jest
+     - name: Run tests
        run: npm test
